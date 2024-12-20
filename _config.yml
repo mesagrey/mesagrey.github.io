@@ -1,0 +1,7 @@
+url: "https://mesagrey.ca/mesasmusicreviews" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/mesasmusicreviews" # the subpath of your site, e.g. /blog
+title: "Mesa's Music Reviews" # the name of your site, e.g. ACME Corp.
+excerpt_separator: <!--ex-->
+repository: greymesa/mesasmusicreviews
+encoding: "utf-8"
+

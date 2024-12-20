@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-CA" }}">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">
+    <script type="text/javascript" src="/assets/js/randoText.js"></script>
+    <script type="text/javascript" src="/assets/js/musicPlayer.js"></script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}" />
+    <!-- Primary Meta Tags -->
+    <title>Mesa's Music Reviews</title>
+    <meta name="title" content="Mesa's Music Reviews" />
+    <meta name="description" content="" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="Mesa's Music Reviews" />
+    <meta property="og:description" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:title" content="Mesa's Music Reviews" />
+    <meta property="twitter:description" content="" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+<body>
+    <div id="container">
+        <div id="topBar"></div>
+        <div id="headerArea">
+            <div id="header"></div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="/"><img src="/assets/images/nav/home.gif" alt="Home"></a></li>
+                    <li><a href="/about"><img src="/assets/images/nav/about.gif" alt="About Me"></a></li>
+                    <li><a href="/reviews"><img src="/assets/images/nav/reviews.gif" alt="Reviews"></a></li>
+                    <li><a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-35627-f1"><img src="/assets/images/nav/guest.gif" alt="Guestbook"></a></li>
+                    <li><a href="/collection"><img src="/assets/images/nav/collection.gif" alt="Record Collection"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="flex">
+            <aside id="leftSidebar">
+                {% if page.title == "record collection" %}
+                    <div>
+                        <div>
+                            <label for="record-type">Choose a record type:</label>
+                            <select id="record-type">
+                                <option value="collection">Owned Records</option>
+                                <option value="wantlist">Wishlist Records</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="sort-by">Sort by:</label>
+                            <select id="sort-by">
+                                <option value="date-added">Date Added</option>
+                                <option value="year">Year Released</option>
+                                <option value="artist">Artist</option>
+                                <option value="title">Album Title</option>
+                                <option value="genre">Genre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="sort-order">Sort Order:</label>
+                            <select id="sort-order">
+                                <option value="desc">Descending</option>
+                                <option value="asc">Ascending</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="search-box">Search:</label>
+                            <input type="text" id="search-box" placeholder="Search by artist, title, or genre">
+                        </div>
+                    </div>
+                {% endif %}
+                <h2>Changelog:</h2>
+                <div class="box">
+                    <p>GNX Review</p>
+                    <p>Nov. 23th 2024</p>
+                    <p>Chromakopia Review</p>
+                    <p>Oct. 30th 2024</p>
+                    <p>ILDMLFY Review</p>
+                    <p>Aug. 3rd 2024</p>
+                </div>
+                <h3>Coming Soon:</h3>
+                <ul>
+                    <li><p>Vultures 2 Review</p></li>
+                    <li><p>Bando Stone Review</p></li>
+                    <li><p>Estate Sale Review</p></li>
+                    <li><p>Much more! Send me requests!!</p></li>
+                </ul>
+                <div>
+
+                </div>
+                
+            </aside>
+            <main>
+                {{ content }}
+            </main>
+            <aside id="rightSidebar">
+                <h2>Mesa's Music Reviews</h2>
+                <h3>Quotebox:</h3>
+                <div class="box">
+                    <p id="line"></p>
+                </div>
+                <h2>Hey, welcome to my website!</h2>
+                <p>With all the craziness going on in the world right now, i've decided to finally start a music review site, my own slice of the internet. I can't promise anything more than a hodgepodge of my own thoughts and feelings on what's new, but i'm grateful to anyone who takes the time to read what i have to say. </p>
+                <h3>Favourite Albums: (more at <a href="/about">About me</a>)</h3>
+                <ul>
+                    <li><p><a href="https://open.spotify.com/album/4Uv86qWpGTxf7fU7lG5X6F?si=ed2bd73af79d45b8">The College Dropout - Kanye West</a></p></li>
+                    <li><p><a href="https://open.spotify.com/album/1ezs1QD5SYQ6LtxpC9y5I2?si=a6cb18d9be9b4fff">I LAY DOWN MY LIFE FOR YOU - JPEGMAFIA</a></p></li>
+                    <li><p><a href="https://open.spotify.com/album/4yUqNSK6jMi7Y6eWl03U5r?si=025fe80123614f07">Bando Stone and The New World - Childish Gambino</a></p></li>
+                    <li><p><a href="https://open.spotify.com/album/4v5x3Oo3UjQ9YmF3hRAip5?si=20ac912fada6416f">Midnight Marauders - A Tribe Called Quest</p></li>
+                    <li><p><a href="https://open.spotify.com/album/3OrucS4sHv6Bl9GS4rafEk?si=8ajxw9ZBQoS5oMK-KxsPbA">Me Against The World - 2Pac</a></p></li>
+                </ul>
+            </aside>
+        </div>
+        <footer id="footer">
+            <marquee scrollamount="10">
+                {% for image in site.static_files %}
+                {% if image.path contains '/assets/images/badges' %}
+                <img id="badge" src="{{ image.path }}" alt="{{ image.name }}">
+                {% endif %}
+                {% endfor %}
+            </marquee>
+            </footer>
+        </div>
+        </body>
+        </html>
+
+               
